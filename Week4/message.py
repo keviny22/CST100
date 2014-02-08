@@ -41,7 +41,7 @@ def decrypt_char(character,key):
     
     
 enc_input = input("Enter a regular message to encode:\n")
-enc_key   = int(input("Enter a key value (between 0 and 100) for encoding:\n"))
+enc_key   = int(input("Enter a key value (between 1 and 100) for encoding:\n"))
 
 for i in  encrypt(enc_input,enc_key):
     print(i, end = '')
@@ -49,7 +49,8 @@ print()
 
 dec_input = input("Enter an encrypted message to decode:\n")
 
-for j in range(100):
+print("The following are the decoded messages for keys 1 to 100:")
+for j in range(1,101):
     print('Key: ' + str(j) + ' -> Decoded Message: ', end='')
     for i in decrypt(dec_input,j):
         print(i, end = '')
